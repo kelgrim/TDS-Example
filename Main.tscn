@@ -6,9 +6,8 @@
 [node name="Main" type="Node2D"]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 511, 300.5 )
-scale = Vector2( 3.20625, 1.87812 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 478, 277 )
+position = Vector2( 154.251, 163.735 )

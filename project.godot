@@ -19,6 +19,15 @@ config/name="TDS-Example"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=320
+window/size/height=320
+window/size/test_width=960
+window/size/test_height=960
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [input]
 
 shoot={

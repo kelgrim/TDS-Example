@@ -12,16 +12,16 @@ func _physics_process(delta):
 	gun_pivot.rotate(angle)
 	
 	if Input.is_action_just_pressed("shoot"):
-		shoot_multipe_bullets()
+		shoot_multiple_bullets()
 
-func shoot_bullet(direction):
+func shoot_bullet(angleInDegrees):
+	var angleInRadians = deg2rad(angleInDegrees)
 	var bullet = packedBullet.instance()
-	bullet.bullet_direction = direction
 	bullet.global_position = gun_muzzle.global_position
-	bullet.rotation = gun_pivot.rotation;
+	bullet.rotation = gun_pivot.rotation + angleInRadians;
 	get_parent().add_child(bullet)
 	
-func shoot_multipe_bullets():
-	shoot_bullet(Vector2(1,0).normalized())
-	shoot_bullet(Vector2(1,0.45).normalized())
-	shoot_bullet(Vector2(1,-0.45).normalized())
+func shoot_multiple_bullets():
+	shoot_bullet(15)
+	shoot_bullet(0)
+	shoot_bullet(-15)

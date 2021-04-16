@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://textures/sPlayerIdle_strip4.png" type="Texture" id=1]
+[ext_resource path="res://textures/sGun.png" type="Texture" id=2]
+[ext_resource path="res://objects/Player.gd" type="Script" id=3]
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 3 )
+
+[node name="Body" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 4
+
+[node name="GunPivot" type="Position2D" parent="."]
+position = Vector2( 0, 6 )
+
+[node name="GunMuzzle" type="Position2D" parent="GunPivot"]
+position = Vector2( 32.0259, -0.129395 )
+
+[node name="Gun" type="Sprite" parent="GunPivot"]
+position = Vector2( 17.0089, -0.629959 )
+texture = ExtResource( 2 )
